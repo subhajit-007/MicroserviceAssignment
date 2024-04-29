@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "201829ca-a184-4931-a86d-5f6a16612183",
+		"name": "CustomerDetailsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32478687"
+	},
+	"item": [
+		{
+			"name": "List of all customer details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:8000/api/customerdetails"
+			},
+			"response": []
+		},
+		{
+			"name": "create customer detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account_no\": 4,\n    \"name\": \"user 04\",\n    \"date_of_birth\": \"01-01-2000\",\n    \"address\": \"Test address\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:8000/api/customerdetails"
+			},
+			"response": []
+		},
+		{
+			"name": "Get particular customer detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"user 01\",\n    \"date_of_birth\": \"01-01-2000\",\n    \"address\": \"Test address\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:8000/api/customerdetails/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update customer detail",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"user 01\",\n    \"date_of_birth\": \"01-01-2000\",\n    \"address\": \"Test address\",\n    \"balance\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://0.0.0.0:8000/api/customerdetails/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer detail",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://0.0.0.0:8000/api/customerdetails/1"
+			},
+			"response": []
+		}
+	]
+}
