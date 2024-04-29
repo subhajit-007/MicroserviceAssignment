@@ -28,3 +28,5 @@
 Note: 
 * README aval for each service separately in the folder
 * Also postman api files provided
+* URLs are provided in the POSTMAN file - This can be directly imported in POSTMAN
+---
